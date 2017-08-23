@@ -6,7 +6,7 @@ Abstract :-
 4.The two wires will be connected from gpio pins of rpi to two digital pins of arduino using simple jumper wires(No uart is used just two simple wires which will either high or low.
 5.The robotic arm will perform operation depending upon the color
 
- 
+  
 HARDWARES USED:
 1.RASPBERRY PI 2
 2.ARDUINO UNO
