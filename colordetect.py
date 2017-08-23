@@ -1,6 +1,8 @@
 import RPi.GPIO as GPIO
+#CONNECT THESE TWO PINS TO ARDUINO PINS
 pin=11
 pin1=13
+#GPIO PINS TO SEND TWO BINARY DATA TO ARDUINO 10,01 OR 11 DEPENDING ON COLOR
 GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False)
 GPIO.setup(pin,GPIO.OUT)
@@ -15,12 +17,15 @@ while True:
     cr=0
     cb=0
     cg=0
-    ret,im = cap.read()
+    ret,im = cap.read() #READ FRAMES
+    hsv = cv2.cvtColor(im,cv2.COLOR_BGR2HSV) #CONVERT FRAMES FROM COLOR TO HSV
+   #lower mask red (IF YOU WANT TO ADD RED COLOR TO THIS PROGROM UNCOMMENT IT)
+    '''
+    THE PIXELS IN THE IMAGE IN THE RANGE IN cv2.inRange() will be converted to white pixels and rest black
     
-    #frame=cv2.imread('1.2.jpg',1)
-    hsv = cv2.cvtColor(im,cv2.COLOR_BGR2HSV)
-   #lower mask red
-    '''lower_red = np.array([0,50,50])
+    
+    
+    lower_red = np.array([0,50,50])
     upper_red = np.array([20,255,255])
     mask0 = cv2.inRange(hsv, lower_red ,upper_red)
    
@@ -45,25 +50,25 @@ while True:
     cv2.imshow('mask red',mask)
     #cv2.imshow('mask blue',maskb)
     #cv2.imshow('mask green',maskg)
-    cr=cv2.countNonZero(mask)
+    cr=cv2.countNonZero(mask) #COUNTS THE WHITE PIXELS IN IMAGE THAT CONTAINS WHITE AND BLACK PIXELS
     cb=cv2.countNonZero(maskb)
     cg=cv2.countNonZero(maskg)
     if(cb>4000):
-        print 'blue'
+        print 'blue' #SEND 1 0 TO ARDUINO
         GPIO.output(pin,GPIO.HIGH)
         GPIO.output(pin1,GPIO.LOW)
         time.sleep(1)
         GPIO.output(pin,GPIO.LOW)
         GPIO.output(pin1,GPIO.LOW)
     elif(cg>4000):
-        print 'green'
+        print 'green'#SEND 0 1 TO ARDUINO
         GPIO.output(pin,GPIO.LOW)
         GPIO.output(pin1,GPIO.HIGH)
         time.sleep(1)
         GPIO.output(pin,GPIO.LOW)
         GPIO.output(pin1,GPIO.LOW)
     elif(cr>8000):
-        print 'yellow'
+        print 'yellow' #SEND 1 1 TO ARDUINO
         GPIO.output(pin,GPIO.HIGH)
         GPIO.output(pin1,GPIO.HIGH)
         time.sleep(1)
@@ -75,16 +80,8 @@ while True:
     #print ('red=',cr)
     #print ('blue',cb)
     #print ('green',cg)
-    if cv2.waitKey(1) & 0xff==ord('q'):
-        
-        break
-  
-
-
-
-    
-   
-    
+    if cv2.waitKey(1) & 0xff==ord('q'):      
+        break    
 #cv2.waitKey()
 cap.release()
 cv2.destroyAllWindows()
