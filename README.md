@@ -7,7 +7,7 @@ Abstract :-
 5.The robotic arm will perform operation depending upon the color
 
   
-HARDWARES USED:
+*HARDWARES USED:
 1.RASPBERRY PI 2
 2.ARDUINO UNO
 3,USB CAMERA
@@ -15,10 +15,11 @@ HARDWARES USED:
 5.3 SERVO MOTORS
 
 
-SOFTWARES USED:
+*SOFTWARES USED:
 1.PYTHON
 2.OPENCV
 3.ARDUINO IDE
+4.NUMPY
 
 
  
