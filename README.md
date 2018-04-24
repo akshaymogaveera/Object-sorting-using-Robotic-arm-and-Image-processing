@@ -1,4 +1,4 @@
-# **Object-sorting-using-Robotic-arm-and-Image-processing**
+# **Object Sorting Using Robotic arm and Image processing**
 Abstract :- 
 
 
