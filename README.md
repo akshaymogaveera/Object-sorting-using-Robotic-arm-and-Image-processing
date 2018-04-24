@@ -63,10 +63,10 @@ Abstract :-
 1. Run classmoto.ino in arduino board which controls two servo motors and a dc motor.
 
 
-2.Run colordetect.py on raspberry pi which is connected with a USB camera.
+2. Run colordetect.py on raspberry pi which is connected with a USB camera.
 
 
-3.Connect two wires from rpi to arduino to send the commands and another wire for ground connection.
+3. Connect two wires from rpi to arduino to send the commands and another wire for ground connection.
 
 
 
