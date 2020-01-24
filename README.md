@@ -12,7 +12,7 @@
 3. RPI is connected to an Arduino Uno board using two Jumper wires which will send the information to arduino board using 2 bit communication method. The color is represented by binary numbers.
 For Eg:- Red is represent as 10, Green as 01 and Blue as 11 where 1 is **HIGH (5 volt)+++++** and 0 is **LOW (0 volt)**.
 
-4. The two wires will be connected from GPIO pins of Rpi to two digital pins of arduino using simple jumper wires.
+4. The two wires will be connected from GPIO pins (11 and 13) of Rpi to two digital pins of arduino using simple jumper wires.
 
 5. The robotic arm will perform operation depending upon the color.
 
