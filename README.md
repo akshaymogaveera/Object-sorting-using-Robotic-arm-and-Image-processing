@@ -1,6 +1,6 @@
 # **Object Sorting Using Robotic arm and Image processing**
 
-## Watch the <a href src="https://photos.app.goo.gl/TQfjFmmqTw9g1Nw4A">Videos</a> of the Robotic arm in action !!
+## Watch the <a href="https://photos.app.goo.gl/TQfjFmmqTw9g1Nw4A">Videos</a> of the Robotic arm in action !!
 
 ## Overview :- 
 
