@@ -1,18 +1,18 @@
 # **Object Sorting Using Robotic arm and Image processing**
-Abstract :- 
+
+## Overview :- 
 
 
-1. The object should be placed in **between the clamp in front of the camera which will be sorted depending upon the color of the object (red,blue and green *can add more colors*). The robotic arm will place them at three different angles at 90,180 and 270 degrees**. The images will be processed by raspberry pi using opencv and the robotic arm will be controlled by arduino board due to its simplicity. 
+1. The object should be placed *(as shown in the video)* in **between the clamp in front of the camera which will be sorted depending upon the color of the object. The robotic arm will place them at three different angles at 90,180 and 270 degrees**. The USB camera which is connected to the Raspberry PI continuously scans the live feed for an colored object.
 
 
-2. Raspberry pi will detect the color by performing various operations on the images captured and will determine the color of the object. 
+2. Raspberry Pi will detect the color of the object using Image Processing. The colors used in this project are Red, Green and Yellow. Colors can be added by modifying the code.
 
 
-3. After the color is detected ,**rpi will send the information to arduino using 2 bits (10,01,11), 1 is high and 0 is low using gpio pins** of raspberry pi
+3. RPI is connected to an Arduino Uno board using two Jumper wires which will send the information to arduino board using 2 bit communication method. The color is represented by binary numbers.
+For Eg:- Red is represent as 10, Green as 01 and Blue as 11 where 1 is **HIGH (5 volt)+++++** and 0 is **LOW (0 volt)**.
 
-
-4. The two wires will be connected from gpio pins of rpi to two digital pins of arduino using simple jumper wires(No UART or other communication bus is used instead two simple wires which will either be high or low.
-
+4. The two wires will be connected from GPIO pins of Rpi to two digital pins of arduino using simple jumper wires.
 
 5. The robotic arm will perform operation depending upon the color.
 
@@ -57,16 +57,17 @@ Abstract :-
 4. NUMPY
 
 
-**How to run these codes..?**
+**How to run the bot..?**
 
 
-1. Run classmoto.ino in arduino board which controls two servo motors and a dc motor.
+1. Run **classmoto.ino** in Arduino board which controls two servo motors and a dc motor.
 
 
-2. Run colordetect.py on raspberry pi which is connected with a USB camera.
+2. Run **colordetect.py** on Raspberry pi which is connected with a USB camera.
+
+3. Ensure the two jumper cables are connected to desired pins by referring the source code.
 
 
-3. Connect two wires from rpi to arduino to send the commands and another wire for ground connection.
 
 
 
