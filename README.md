@@ -5,7 +5,7 @@
 ## Overview :- 
 
 
-1. The object should be placed *(as shown in the video)* in **between the clamp in front of the camera which will be sorted depending upon the color of the object. The robotic arm will place them at three different angles at 90,180 and 270 degrees**. The USB camera which is connected to the Raspberry PI continuously scans the live feed for an colored object.
+1. The object should be placed *(as shown in the video)* in **between the clamp in front of the camera which will be sorted depending upon the color of the object. The robotic arm will place them at three different angles at 90,180 and 270 degrees**. The USB camera which is connected to the Raspberry PI continuously scans the live feed for a colored object.
 
 
 2. Raspberry Pi will detect the color of the object using Image Processing. The colors used in this project are Red, Green and Yellow. Colors can be added by modifying the code.
