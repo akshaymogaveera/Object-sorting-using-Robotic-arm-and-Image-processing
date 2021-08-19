@@ -1,8 +1,8 @@
 # **Object Sorting Using Robotic arm and Image processing**
 
-## Watch the <a href="https://photos.app.goo.gl/TQfjFmmqTw9g1Nw4A">Videos</a> of the Robotic arm in action !!
+## Watch the <a href="https://youtu.be/t3t1tSswEEQ">Videos</a> of the Robotic arm in action !!
 
-## Overview :- 
+## Overview : 
 
 
 1. The object should be placed *(as shown in the video)* in **between the clamp in front of the camera which will be sorted depending upon the color of the object. The robotic arm will place them at three different angles at 90,180 and 270 degrees**. The USB camera which is connected to the Raspberry PI continuously scans the live feed for a colored object.
